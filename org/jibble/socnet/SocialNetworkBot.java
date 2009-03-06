@@ -59,7 +59,8 @@ public class SocialNetworkBot extends PircBot {
     protected void onPrivateMessage(String sender, String login, String hostname, String message) {
         // Only allow access if the correct password has been supplied.
         if (!message.startsWith(config.password)) {
-            sendMessage(sender, "Incorrect password.");
+        //    disabled for twitter
+        //    sendMessage(sender, "Incorrect password.");
             return;
         }
         
